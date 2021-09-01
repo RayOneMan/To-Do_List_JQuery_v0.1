@@ -16,7 +16,6 @@ $(document).ready(function(){
     $('ul').on('click','.TDtrash', function(){ 
         $(this).parent('li').fadeOut(0);
         tasks.pop();
-        console.log(tasks);
         if (tasks.length == 0) {$(".empty").show(1000);
         $(".notEmpty").hide(500);}
 
