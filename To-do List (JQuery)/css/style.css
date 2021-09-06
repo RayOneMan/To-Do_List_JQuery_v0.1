@@ -1,0 +1,235 @@
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(310deg, #ffee00 30%, #acaba1 60%, #9e9d9d 80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+
+.main {
+  height: 600px;
+  width: 400px;
+  background: linear-gradient(310deg, #9e9d9d 10%, #acaba1 60%, #ffee00 80%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.menu__input {
+  height: 50px;
+  width: 85%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #666;
+  color: #fff;
+  padding: 0 10px;
+  margin: 15px 0;
+}
+
+.menu__input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.menu__input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.menu__input::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.menu__input::placeholder {
+  color: #bbb;
+}
+
+.menu__btn-add {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: -8px;
+  margin: 15px;
+  text-align: center;
+}
+
+.menu__btn-add:hover {
+  color: black;
+  background-color: white;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+ul li {
+  background: #7a7a75;
+  color: #fff;
+  height: 40px;
+  border-radius: 50px;
+  margin: 10px 0;
+  padding: 10px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+ul .TDstar {
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: absolute;
+  cursor: pointer;
+  right: 65px;
+  color: #d40d0d;
+}
+
+ul .TDstar:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+ul .TDcheck {
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: absolute;
+  cursor: pointer;
+  right: 40px;
+  color: #0cd40c;
+}
+
+ul .TDcheck:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+ul .TDtrash {
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  color: #16090f;
+}
+
+ul .TDtrash:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: red;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+ul .task_important {
+  background: #be1e1e;
+  font-weight: 700;
+  -webkit-text-decoration: solid underline white 3px;
+          text-decoration: solid underline white 3px;
+}
+
+ul .task_important .TDstar {
+  color: black;
+}
+
+ul .task_important .TDtrash:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: black;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+ul .task_checked {
+  background: #8eff8a;
+  text-decoration: line-through;
+  color: black;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+ul .task_checked .TDcheck {
+  color: red;
+}
+
+ul .task_checked .TDstar {
+  display: none;
+}
+
+.list__empty {
+  display: block;
+  border-bottom: 3px solid black;
+  font-size: 15px;
+  letter-spacing: 1px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.list__not-empty {
+  border-bottom: 3px solid black;
+  font-size: 15px;
+  letter-spacing: 1px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .menu__btn-add {
+    width: 45px;
+    height: 45px;
+    border-radius: 25%;
+    font-size: 30px;
+    top: 11px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 319px) {
+  .menu__btn-add {
+    width: 30px;
+    height: 45px;
+    border-radius: 0;
+    font-size: 20px;
+    top: 10px;
+    right: -7px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
