@@ -1,0 +1,96 @@
+ul {
+	li {
+		background: #7a7a75;
+		color: #fff;
+		height: 40px;
+		border-radius: 50px;
+		margin: 10px 0;
+		padding: 10px;
+		position: relative;
+		transition: 1s;
+	}
+	.TDstar {
+		transition: .5s;
+		position: absolute;
+		cursor: pointer;
+		right: 65px;
+		color: #d40d0d;
+		&:hover {
+			transition: .5s;
+			transform: scale(1.5);
+		}
+	}
+	.TDcheck {
+		transition: .5s;
+		position: absolute;
+		cursor: pointer;
+		right: 40px;
+		color: #0cd40c;
+		&:hover {
+			transition: .5s;
+			transform: scale(1.5);
+		}
+	}
+	.TDtrash {
+		transition: .5s;
+		position: absolute;
+		cursor: pointer;
+		right: 15px;
+		color: #16090f;
+		&:hover {
+			transition: .5s;
+			color: red;
+			transform: scale(1.5);
+		}
+	}
+	.task_important {
+		background: #be1e1e;
+		font-weight: 700;
+		-webkit-text-decoration: solid underline white 3px;
+		text-decoration: solid underline white 3px;
+		.TDstar {
+			color: black;
+		}
+		.TDtrash {
+			&:hover {
+				transition: .5s;
+				color: black;
+				transform: scale(1.5);
+			}
+		}
+	}
+	.task_checked {
+		background: #8eff8a;
+		text-decoration: line-through;
+		color: black;
+		transition: 1s;
+		.TDcheck {
+			color: red;
+		}
+		.TDstar {
+			display: none;
+		}
+	}
+}
+.list__empty {
+	display: block;
+	border-bottom: 3px solid black;
+	font-size: 15px;
+	letter-spacing: 1px;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	text-align: center;
+}
+.list__not-empty {
+	border-bottom: 3px solid black;
+	font-size: 15px;
+	letter-spacing: 1px;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	text-align: center;
+	display: none;
+}
