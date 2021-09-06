@@ -1,0 +1,21 @@
+{
+  "name": "todo_list_jquery",
+  "version": "0.0.1",
+  "description": "To Do List App Using JQuery Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start index.html"
+  },
+  "keywords": [
+    "JQuery"
+  ],
+  "author": "OneRayMan",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "scss": "^0.2.4"
+  }
+}
