@@ -50,4 +50,26 @@
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
+
+@media (max-width: 480px) {
+  .menu__btn-add {
+    width: 45px;
+    height: 45px;
+    border-radius: 25%;
+    font-size: 30px;
+    top: 11px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 319px) {
+  .menu__btn-add {
+    width: 30px;
+    height: 45px;
+    border-radius: 0;
+    font-size: 20px;
+    top: 10px;
+    right: -7px;
+  }
+}
 /*# sourceMappingURL=menu.css.map */
